@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+@theme {
+  --color-stone-925: #0c0c0c;
+  --color-neutral-850: #222223;
+  --color-gray-opacity: rgba(21, 21, 21, 0.6);
+  --color-white: #fff;
+  --color-purple: #832388;
+  --color-pink: #e3436b;
+  --color-orange: #f0772f;
+
+  --font-jetbrains-mono: "JetBrains Mono", monospace;
+  --font-outfit: "Outfit", sans-serif;
+  --shadow-highlight: 0 0 12px #e3436b99;
+}
+
+html {
+  font-family: var(--font-outfit);
+}
+
+.gradient-royal {
+  background: linear-gradient(
+    to right,
+    var(--color-purple),
+    var(--color-pink),
+    var(--color-orange)
+  );
+}
+
+.highlight-top {
+  background-image: linear-gradient(
+    90deg,
+    #0000 5%,
+    rgba(255, 255, 255, 0.7) 35%,
+    rgba(255, 255, 255, 0.9) 50%,
+    rgba(255, 255, 255, 0.7) 65%,
+    #0000 95%
+  );
+}
+
+.button-shadows {
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.15),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+}
+.highlight-shadows {
+  box-shadow: 0 -3px 12px rgba(255, 255, 255, 0.1);
+}
