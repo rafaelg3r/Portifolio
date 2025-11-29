@@ -1,13 +1,13 @@
 export function Hero() {
   return (
     <div className="flex w-fit">
-      <div className="flex justify-between flex-col">
+      <div className="flex justify-between flex-col gap-1.5">
         <div className="flex justify-between">
           <span className="text-2xl font-jetbrains-mono text-white-600">
             Desenvolvedor Front-End
           </span>
         </div>
-        <h1 className="font-pixelify text-6xl text-white-900 text-shadow-white ">
+        <h1 className="font-pixelify text-6xl text-white-900 text-shadow-title-name ">
           RAFAEL DA COSTA VEDANA
         </h1>
         <div className="flex gap-8 items-center justify-center">

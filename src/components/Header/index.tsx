@@ -5,7 +5,7 @@ export function Header() {
     <header className="flex justify-between items-center py-5 backdrop-blur-md">
       <div className="flex w-[142px]">
         <img
-          src="../public/logotipo.png"
+          src="/logotipo.png"
           alt=""
           className="h-11 cursor-pointer opacity-80 hover:opacity-100"
         />

@@ -12,6 +12,10 @@
   --color-neutral-850: #222223;
   --color-neutral-950: #151515;
 
+  --color-blue-950: #12488b;
+  --color-gray-250: #c0bfbd;
+
+  --color-forest-green: #218859;
   --color-gray-opacity: rgba(21, 21, 21, 0.6);
   --color-purple-1: #832388;
   --color-pink-1: #e3436b;
@@ -23,25 +27,51 @@
   --font-pixelify: "Pixelify Sans", cursive;
 
   /* shadows */
+  --shadow-project-img: 0 40px 50px 10px #00000040;
   --shadow-button: inset 0 1px rgba(255, 255, 255, 0.15),
     inset 0 0 0 1px rgba(255, 255, 255, 0.1),
     0 -3px 8px rgba(255, 255, 255, 0.1);
   --shadow-highlight-royal: 0 0 12px #e3436b99;
-  --inset-shadow-project-card: 0 0 0 1px rgba(255, 255, 255, 0.1),
-    0 -1px 0 rgba(255, 255, 255, 0.15);
   --shadow-project-card: 0 30px 120px rgba(0, 0, 0, 0.8),
     0 0 60px rgba(0, 0, 0, 0.2), 0 0 8px rgba(0, 0, 0, 0.4);
-
-  --inset-shadow-ball: 0 1px 0 rgba(255, 255, 255, 0.2);
   --shadow-ball: 0 0 24px rgba(255, 255, 255, 0.3);
+  --shadow-minicard: 0 0 12px rgba(0, 0, 0, 0.6);
+
+  /* inset shadows */
+  --inset-shadow-project-card: 0 0 0 1px rgba(255, 255, 255, 0.1),
+    0 -1px 0 rgba(255, 255, 255, 0.15);
+  --inset-shadow-ball: 0 1px 0 rgba(255, 255, 255, 0.2);
+  --inset-shadow-minicard: inset 0 1px #ffffff1a, inset 0 0 0 1px #ffffff0f;
+
+  /* text shadows */
+  --text-shadow-title-name: 0 0 8px #ffffff73,
+    0 -4px 4px rgba(240, 119, 47, 0.25), 0 4px 4px rgba(18, 72, 139, 0.25);
+  --text-shadow-title: 0 0 4px #ffffff66, 0 -4px 3px rgba(240, 119, 47, 0.25),
+    0 4px 3px rgba(18, 72, 139, 0.25);
   --text-shadow-white: 0 0 8px #ffffff73;
   --text-shadow-simple: 0 2px 8px rgba(255, 255, 255, 0.5),
     0 4px 30px rgba(255, 255, 255, 0.25);
+  --text-shadow-simple-50: 0 2px 8px rgba(255, 255, 255, 0.2),
+    0 4px 30px rgba(255, 255, 255, 0.15);
+
+    /* animations */
+    --animate-blink: blink 1s step-end infinite;
 }
 
 html {
   font-family: var(--font-outfit);
   color: yellow;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+span,
+a,
+button {
+  line-height: 100%;
 }
 
 .gradient-royal {
@@ -63,4 +93,16 @@ html {
     #0000 90%
   );
   opacity: 0.7;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
