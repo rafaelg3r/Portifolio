@@ -24,7 +24,7 @@ function App() {
       <div className="px-28 flex flex-col gap-16  ">
         <Header />
         <div className="flex justify-center items-center ">
-          <ProjectCard height="h-[600px]" padTop="pt-20">
+          <ProjectCard height="h-[600px]" width="min-w-[914px]" padTop="pt-20">
             <div className="absolute flex justify-between items-center px-3 -top-px left-0 right-0 h-10 rounded-t-2xl bg-linear-to-r  from-white-100 via-white-500 to-white-100">
               <div className="absolute top-0 left-0 right-0 h-px  text-amber-50 highlight-top"></div>
               <div className="flex gap-3">
@@ -58,7 +58,12 @@ function App() {
       </div>
       <div className="-mt-49  w-full h-50 bg-linear-to-t from-stone-925 from-30% to-transparent absolute z-2"></div>
       <div className="flex justify-center items-center bg-stone-925 w-full h-full py-10 relative z-10">
-        <ProjectCard height="h-[667px]" padTop="pt-9">
+        <ProjectCard
+          link="https://domhygino.com.br/"
+          height="h-[667px]"
+          width="min-w-[914px]"
+          padTop="pt-9"
+        >
           <div className="flex flex-col gap-5 w-200 h-full text-start relative ">
             <div className="flex flex-col w-full ">
               <div className="flex justify-between">

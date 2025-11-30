@@ -21,6 +21,7 @@
   --color-pink-1: #e3436b;
   --color-orange-1: #f0772f;
 
+
   /* fonts */
   --font-jetbrains-mono: "JetBrains Mono", monospace;
   --font-outfit: "Outfit", sans-serif;
@@ -54,8 +55,8 @@
   --text-shadow-simple-50: 0 2px 8px rgba(255, 255, 255, 0.2),
     0 4px 30px rgba(255, 255, 255, 0.15);
 
-    /* animations */
-    --animate-blink: blink 1s step-end infinite;
+  /* animations */
+  --animate-blink: blink 1s step-end infinite;
 }
 
 html {
@@ -93,6 +94,11 @@ button {
     #0000 90%
   );
   opacity: 0.7;
+}
+
+.projectCardBg {
+  background-color: red;
+  /* background-image: radial-gradient(circle at 50% 0, #7fcfff33, #0000 80%), radial-gradient(circle at 50% 0, #035, #0000); */
 }
 
 @keyframes blink {
