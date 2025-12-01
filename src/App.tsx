@@ -8,20 +8,15 @@ import { TechCard } from "./components/TechCard";
 import html from "./assets/icons/html.svg";
 import css from "./assets/icons/css.svg";
 import js from "./assets/icons/javascript.svg";
-// import react from "./assets/icons/react.svg";
-// import vite from "./assets/icons/vite.svg";
-// import tailwind from "./assets/icons/tailwindcss.svg";
-// import ts from "./assets/icons/typeScript.svg";
 
 import arrowRight from "./assets/icons/arrow-r.svg";
 
 import domhygino from "./assets/mockups/domhygino.jpg";
-// import domhyginoMenu from "./assets/mockups/domhyginoMenu.jpg";
 
 function App() {
   return (
-    <>
-      <div className="px-28 flex flex-col gap-16  ">
+    <div>
+      <div className="px-28 flex flex-col gap-16">
         <Header />
         <div className="flex justify-center items-center ">
           <ProjectCard height="h-[600px]" width="min-w-[914px]" padTop="pt-20">
@@ -50,7 +45,7 @@ function App() {
                 <span className="font-pixelify text-shadow-title">
                   profissionais
                 </span>
-                <div className="absolute top-2.5 right-0 w-0.5 h-7 bg-white-600 animate-blink"></div>
+                <div className="absolute top-2 right-0 w-0.5 h-7 bg-white-600 animate-blink"></div>
               </strong>
             </div>
           </ProjectCard>
@@ -64,7 +59,7 @@ function App() {
           width="min-w-[914px]"
           padTop="pt-9"
         >
-          <div className="flex flex-col gap-5 w-200 h-full text-start relative ">
+          <div className="flex flex-col gap-5 w-full h-full text-start items-center relative overflow-hidden ">
             <div className="flex flex-col w-full ">
               <div className="flex justify-between">
                 <h4 className="text-white-900 font-outfit text-2xl uppercase text-shadow-white">
@@ -76,7 +71,7 @@ function App() {
                 Website da rede de lojas de carne Dom Hygino
               </p>
             </div>
-            <div className="flex gap-2.5 self-start">
+            <div className="flex gap-2.5 self-start ">
               <TechCard>
                 <img src={html} alt="Logo do HTML" />
                 <span>Html</span>
@@ -93,12 +88,12 @@ function App() {
             <img
               src={domhygino}
               alt="Captura de tela do site domhygino.com.br"
-              className="rounded-2xl shadow-project-img absolute -bottom-8 "
+              className="rounded-2xl shadow-project-img absolute -bottom-14 transition-all duration-300 ease-out group-hover:-bottom-8"
             />
           </div>
         </ProjectCard>
       </div>
-    </>
+    </div>
   );
 }
 

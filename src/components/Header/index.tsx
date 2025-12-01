@@ -1,12 +1,12 @@
 import { Button } from "../Button";
-
+import logotipo from "../../assets/logotipo.png";
 export function Header() {
   return (
     <header className="flex justify-between items-center py-5 backdrop-blur-md">
       <div className="flex w-[142px]">
         <img
-          src="/logotipo.png"
-          alt=""
+          src={logotipo}
+          alt="logo da letra R em estilizada com uma coroa"
           className="h-11 cursor-pointer opacity-80 hover:opacity-100"
         />
       </div>
