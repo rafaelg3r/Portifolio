@@ -5,6 +5,7 @@ type ProjectCardProps = {
   width?: string;
   padTop?: string;
   link?: string;
+  hoverClass?: "domHoverBg" | "classmindHoverBg" | "portifolioHoverBg";
 };
 
 export function ProjectCard({
@@ -13,6 +14,7 @@ export function ProjectCard({
   padTop,
   width,
   link,
+  hoverClass
 }: ProjectCardProps) {
   const paddingTop = padTop ? padTop : "pt-14";
   const [isHovering, setIsHovering] = useState(false);
@@ -42,7 +44,7 @@ export function ProjectCard({
         >
           {children}
           <div
-            className={`teste0 transition-opacity duration-300 ease-in-out
+            className={`${hoverClass} transition-opacity duration-300 ease-in-out
               ${isHovering ? " teste1 opacity-100" : "teste1 opacity-0"}`}
           ></div>
         </a>

@@ -94,9 +94,20 @@ button {
   opacity: 0.7;
 }
 
-.teste0{
-  background-image: radial-gradient(circle at 50% 0, #7fcfff33, #0000 80%),
-    radial-gradient(circle at 50% 0, #035, #0000);
+.domHoverBg{
+  background-image: radial-gradient(circle at 50% 0, #e5334566, #0000 80%),
+    radial-gradient(circle at 50% 0, #8B1C25, #0000);
+}
+.classmindHoverBg{
+  background-image: radial-gradient(circle at 50% 0, #6666D833, #0000 80%),
+    radial-gradient(circle at 50% 0, #3A3A90, #0000);
+}
+.portifolioHoverBg{
+  background-image: radial-gradient(circle at 50% 0, #e5334566, #0000 80%),
+    radial-gradient(circle at 50% 0, #8B1C25, #0000);
+}
+.homeRadial{
+   background-image: radial-gradient(circle at 50% 0, #dd416d21, #0000 60%);
 }
 
 .teste1 {
