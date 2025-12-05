@@ -4,7 +4,7 @@ export function Header() {
   return (
     <header className="fixed top-0 left-0 w-full z-50 flex justify-between items-center py-5 backdrop-blur-sm ">
       <div className="flex justify-between items-center w-full px-25">
-        <div className="flex w-[112px]">
+        <div className="flex w-28">
           <img
             src={logotipo}
             alt="logo da letra R em estilizada com uma coroa"

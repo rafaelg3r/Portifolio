@@ -1,6 +1,7 @@
 import { useState } from "react";
+
 type ProjectCardProps = {
-  children: React.ReactNode;
+  children: React.ReactNode | ((isHovering: boolean) => React.ReactNode);
   height: string;
   width?: string;
   padTop?: string;
@@ -32,17 +33,19 @@ export function ProjectCard({
   const parentClasses =
     "group p-2 outline-white-100 outline-1 -outline-offset-1 bg-linear-to-b from-neutral-950 to-stone-925 shadow-project-card rounded-2xl relative";
 
+  const content = typeof children === "function" ? children(isHovering) : children;
+
   if (link) {
     return (
       <div className={parentClasses} {...commonProps}>
-        <div className="absolute top-0 left-0 right-0 h-px highlight-top z-1  "></div>
+        <div className="absolute top-0 left-0 right-0 h-px highlight-top z-1"></div>
         <a
           id="linkContainer"
           href={link}
           target="_blank"
           className={`${baseCardClasses} ${isHovering ? "inset-shadow-project-card-hover" : "inset-shadow-project-card"}`}
         >
-          {children}
+          {content}
           <div
             className={`${hoverClass} transition-opacity duration-300 ease-in-out
               ${isHovering ? " teste1 opacity-100" : "teste1 opacity-0"}`}
@@ -54,7 +57,7 @@ export function ProjectCard({
     return (
       <div className={parentClasses}>
         <div className="absolute -top-px left-0 right-0 h-px highlight-top z-1"></div>
-        <div className={`${baseCardClasses} `}>{children}</div>
+        <div className={`${baseCardClasses}`}>{content}</div>
       </div>
     );
   }
