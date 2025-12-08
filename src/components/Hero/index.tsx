@@ -17,7 +17,6 @@ export function Hero() {
           </span>
         </div>
       </div>
-      <div className="w-8 h-8 gradient-royal rounded-4xl"></div>
     </div>
   );
 }

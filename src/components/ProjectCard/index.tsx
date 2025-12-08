@@ -22,16 +22,15 @@ export function ProjectCard({
 
   const baseCardClasses = `
     flex flex-col px-8 ${paddingTop} gap-14 ${height} ${width} 
-    bg-linear-to-b from-neutral-950 to-stone-925 
-    shadow-project-card rounded-2xl 
-    relative z-1
+    bg-linear-to-b from-neutral-950-60 to-stone-925-60 
+     shadow-project-card rounded-[10px] relative z-1
   `;
   const commonProps = {
     onMouseEnter: () => setIsHovering(true),
     onMouseLeave: () => setIsHovering(false),
   };
   const parentClasses =
-    "group p-2 outline-white-100 outline-1 -outline-offset-1 bg-linear-to-b from-neutral-950 to-stone-925 shadow-project-card rounded-2xl relative";
+    "group p-2 outline-white-100 outline-1 -outline-offset-1 bg-linear-to-b from-neutral-950-60 to-stone-925-60 backdrop-blur-sm shadow-project-card rounded-2xl relative";
 
   const content = typeof children === "function" ? children(isHovering) : children;
 
