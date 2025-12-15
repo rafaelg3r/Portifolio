@@ -5,7 +5,7 @@ type ProjectCardProps = {
   height: string;
   width?: string;
   padTop?: string;
-  link?: string;
+  link?: string; 
   hoverClass?: "domHoverBg" | "classmindHoverBg" | "portifolioHoverBg";
 };
 

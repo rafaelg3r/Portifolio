@@ -50,10 +50,10 @@ function App() {
                   atrativas
                 </span>{" "}
                 e{" "}
-                <span className="font-pixelify text-shadow-title">
+                <span className="font-pixelify text-shadow-title relative">
                   profissionais
+                <div className="absolute top-1 -right-0.5 w-0.5 h-7 bg-white-600 animate-blink"></div>
                 </span>
-                <div className="absolute top-2 right-0 w-0.5 h-7 bg-white-600 animate-blink"></div>
               </strong>
             </div>
           </ProjectCard>
