@@ -13,42 +13,27 @@
   --color-neutral-950: #151515;
   --color-neutral-950-60: #15151599;
 
-  --color-blue-950: #12488b;
+  --color-lavander-100: #f6e8ea;
+  --color-gum-100: #ef626c;
+  --color-lemon-100: #c3d350;
+
   --color-gray-250: #c0bfbd;
-
-  --color-forest-green: #218859;
   --color-gray-opacity: rgba(21, 21, 21, 0.6);
-  --color-darkblue-1: #015658;
-  --color-blue-1: #18a0fb;
-  --color-green-1: #1bc47d;
-
   /* fonts */
   --font-jetbrains-mono: "JetBrains Mono", monospace;
   --font-outfit: "Outfit", sans-serif;
   --font-pixelify: "Pixelify Sans", times;
   --font-playfair: "Playfair Display", times, serif;
-  --font-host-grotesk: "Host Grotesk", sans-serif;
+  --font-grotesk: "Hanken Grotesk", sans-serif;
 
+  /* bg grid */
+  --color-grid-line: rgba(255, 255, 255, 0.1);
   /* shadows */
-  --shadow-project-img: 0 40px 50px 10px #00000040;
   --shadow-button:
     inset 0 1px rgba(255, 255, 255, 0.15),
     inset 0 0 0 1px rgba(255, 255, 255, 0.1),
     0 -3px 8px rgba(255, 255, 255, 0.1);
   --shadow-highlight-button: 0 0 12px #ffffff40;
-  --shadow-project-card:
-    0 30px 120px rgba(0, 0, 0, 0.8), 0 0 60px rgba(0, 0, 0, 0.2),
-    0 0 8px rgba(0, 0, 0, 0.4);
-  --shadow-ball: 0 0 24px rgba(255, 255, 255, 0.3);
-  --shadow-minicard: 0 0 12px rgba(0, 0, 0, 0.6);
-
-  /* inset shadows */
-  --inset-shadow-project-card:
-    0 0 0 1px rgba(255, 255, 255, 0.1), 0 -1px 0 rgba(255, 255, 255, 0.15);
-  --inset-shadow-project-card-hover: 0 0 0 1px rgba(255, 255, 255, 0.5);
-  --inset-shadow-ball: 0 1px 0 rgba(255, 255, 255, 0.2);
-  --inset-shadow-minicard: inset 0 1px #ffffff1a, inset 0 0 0 1px #ffffff0f;
-
   /* text shadows */
   --text-shadow-title-name:
     0 0 8px #ffffff73, 0 -4px 4px rgba(240, 119, 47, 0.25),
@@ -62,6 +47,21 @@
   --text-shadow-simple-50:
     0 2px 8px rgba(255, 255, 255, 0.2), 0 4px 30px rgba(255, 255, 255, 0.15);
 }
+@layer utilities {
+  .small-caps {
+    font-variant: small-caps;
+  }
+  .bg-grid {
+    background-size: 60px 60px;
+    background-image:
+      linear-gradient(90deg, #ffffff10 1px, #0000 1px),
+      linear-gradient(#ffffff10 1px, #0000 1px);
+  }
+  .mask-radial-fade {
+    mask-image: radial-gradient(ellipse at center, black 20%, transparent 80%);
+  }
+}
+
 html {
   font-family: var(--font-outfit);
   scroll-behavior: smooth;

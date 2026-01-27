@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 type ButtonProps = {
   children: React.ReactNode;
   type: "default" | "gradient";
@@ -19,9 +21,12 @@ export function Button({ children, type, isActive, onClick }: ButtonProps) {
       );
     case "gradient":
       return (
-        <button className=" px-4 py-1.5 text-white-900 font-outfit text-md rounded-3xl cursor-pointer gradient-button text-shadow-simple hover:brightness-110 hover:translate-y-0.5 hover:scale-105 hover:shadow-highlight-button transition-all duration-300">
+        <motion.button
+          whileHover={{ scale: 1.1 }}
+          className=" px-4 py-1.5 text-white-900 font-outfit text-md rounded-3xl cursor-pointer text-shadow-simple"
+        >
           {children}
-        </button>
+        </motion.button>
       );
     default:
       throw new Error(`Button type "${type}" is not supported`);
