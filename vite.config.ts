@@ -9,5 +9,5 @@ import svgrPlugin from "vite-plugin-svgr";
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), tailwindcss(), svgrPlugin()],
-  base: "/Portifolio",
+  base: "/Portifolio", // remove on deploy
 });
