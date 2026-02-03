@@ -2,33 +2,64 @@ import { motion } from "framer-motion";
 
 type ButtonProps = {
   children: React.ReactNode;
-  type: "default" | "gradient";
+  type: "default" | "main" | "border";
   isActive?: boolean;
   onClick?: () => void;
 };
 export function Button({ children, type, isActive, onClick }: ButtonProps) {
-  switch (type) {
-    case "default":
-      return (
-        <button
-          onClick={onClick} // Adicionado o evento de clique
-          className={`px-4 py-1.5 text-white-900 font-outfit text-sm rounded-3xl cursor-pointer transition-colors duration-200 text-shadow-simple ${
-            isActive ? "bg-neutral-850" : "hover:bg-neutral-850"
-          }`}
-        >
-          {children}
-        </button>
-      );
-    case "gradient":
-      return (
-        <motion.button
-          whileHover={{ scale: 1.1 }}
-          className=" px-4 py-1.5 text-white-900 font-outfit text-md rounded-3xl cursor-pointer text-shadow-simple"
-        >
-          {children}
-        </motion.button>
-      );
-    default:
-      throw new Error(`Button type "${type}" is not supported`);
+  const buttonClasses = `lg:px-6 md:px-4 text-white-900 text-md rounded-md cursor-pointer text-shadow-simple flex gap-3 items-center justify-center font-semibold h-12`;
+  try {
+    switch (type) {
+      case "default":
+        return (
+          <button
+            onClick={onClick} // Adicionado o evento de clique
+            className={`px-4 py-1.5 text-zinc-100 text-sm rounded-3xl cursor-pointer transition-colors duration-200  ${
+              isActive ? "bg-neutral-850" : "hover:bg-neutral-850"
+            }`}
+          >
+            {children}
+          </button>
+        );
+      case "main":
+        return (
+          <motion.button
+            initial={{
+              backgroundColor: "#615FFF",
+              color: "var(--color-white-900)",
+            }}
+            whileHover={{
+              backgroundColor: "#c3d350",
+              color: "#0c0c0c",
+            }}
+            transition={{ duration: 0.15 }}
+            className={`${buttonClasses} `}
+          >
+            {children}
+          </motion.button>
+        );
+      case "border":
+        return (
+          <motion.button
+            initial={{
+              backgroundColor: "#ffffff00",
+              color: "var(--color-white-900)",
+            }}
+            whileHover={{
+              backgroundColor: "#fff",
+              color: "#0c0c0c",
+            }}
+            transition={{ duration: 0.15 }}
+            className={`${buttonClasses}  border border-white-900 `}
+          >
+            {children}
+          </motion.button>
+        );
+      default:
+        throw new Error(`Button type "${type}" is not supported`);
+    }
+  } catch (error) {
+    console.error(error);
+    return null;
   }
 }

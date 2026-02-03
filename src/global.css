@@ -6,25 +6,22 @@
   --color-white-500: #f2f2f280;
   --color-white-100: #f2f2f21a;
 
-  --color-stone-925: #0c0c0c;
-  --color-stone-925-60: #0c0c0c99;
+  --color-stone-920: #0c0c0c;
+  --color-stone-925: #060606;
 
   --color-neutral-850: #222223;
   --color-neutral-950: #151515;
-  --color-neutral-950-60: #15151599;
-
-  --color-lavander-100: #f6e8ea;
-  --color-gum-100: #ef626c;
-  --color-lemon-100: #c3d350;
 
   --color-gray-250: #c0bfbd;
-  --color-gray-opacity: rgba(21, 21, 21, 0.6);
+
+  --color-lemon-100: #c3d350;
+  --color-lemon-200: #00bc7d;
+  --color-lemon-800: #00130D;
   /* fonts */
-  --font-jetbrains-mono: "JetBrains Mono", monospace;
-  --font-outfit: "Outfit", sans-serif;
+  --font-jetbrains: "JetBrains Mono", monospace;
   --font-pixelify: "Pixelify Sans", times;
-  --font-playfair: "Playfair Display", times, serif;
-  --font-grotesk: "Hanken Grotesk", sans-serif;
+  --font-elegant: "Playfair Display", times, serif;
+  --font-main: "Hanken Grotesk", sans-serif;
 
   /* bg grid */
   --color-grid-line: rgba(255, 255, 255, 0.1);
@@ -34,6 +31,11 @@
     inset 0 0 0 1px rgba(255, 255, 255, 0.1),
     0 -3px 8px rgba(255, 255, 255, 0.1);
   --shadow-highlight-button: 0 0 12px #ffffff40;
+  --shadow-circle:
+    inset 0 2px 3px rgba(255, 255, 255, 0.2),
+    inset 0 -2px 3px rgba(0, 0, 0, 0.7),
+    inset 2px 0 2px rgba(255, 255, 255, 0.1),
+    inset -2px 0 2px rgba(255, 255, 255, 0.1);
   /* text shadows */
   --text-shadow-title-name:
     0 0 8px #ffffff73, 0 -4px 4px rgba(240, 119, 47, 0.25),
@@ -63,17 +65,12 @@
 }
 
 html {
-  font-family: var(--font-outfit);
+  font-family: var(--font-main);
   scroll-behavior: smooth;
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-p,
-span,
-a,
-button {
-  line-height: 100%;
+body {
+  color: var(--color-zinc-400);
+}
+section {
+  scroll-margin-top: 100px;
 }

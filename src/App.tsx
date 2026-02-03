@@ -5,12 +5,12 @@ import { Skills } from "./sections/Skills.tsx";
 
 function App() {
   return (
-    <div className="px-[100px]">
+    <main className="lg:px-40 md:px-14 px-5 flex flex-col gap-10">
       <Hero />
       <About />
       <Projects />
       <Skills />
-    </div>
+    </main>
   );
 }
 
