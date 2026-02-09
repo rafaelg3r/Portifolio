@@ -8,11 +8,11 @@ type AboutCardProps = {
 export function AboutCard({ title, subtitle, rounded }: AboutCardProps) {
   let roundedClass = "";
   if (rounded === "left") {
-    roundedClass = "rounded-l-lg";
+    roundedClass = "md:rounded-l-lg md:rounded-tr-none rounded-t-lg";
   } else if (rounded === "middle") {
     roundedClass = "rounded-none";
   } else if (rounded === "right") {
-    roundedClass = "rounded-r-lg";
+    roundedClass = "md:rounded-bl-none md:rounded-r-lg rounded-b-lg";
   }
   return (
     <motion.div
@@ -23,12 +23,10 @@ export function AboutCard({ title, subtitle, rounded }: AboutCardProps) {
         backgroundColor: "#27272a",
       }}
       transition={{ duration: 0.15 }}
-      className={` flex flex-col items-center p-2 text-sm ${roundedClass} `}
+      className={` flex flex-col items-center p-2  ${roundedClass} `}
     >
       <span className="leading-3 font-jetbrains text-[12px]">{title}</span>
-      <span className="text-zinc- border-transparent200 font-bold text-xl">
-        {subtitle}
-      </span>
+      <span className="text-zinc-300 font-bold text-xl">{subtitle}</span>
     </motion.div>
   );
 }

@@ -1,7 +1,7 @@
 import { Hero } from "./sections/Hero.tsx";
 import { About } from "./sections/About.tsx";
 import { Projects } from "./sections/Projects.tsx";
-import { Skills } from "./sections/Skills.tsx";
+import { Contact } from "./sections/Contact.tsx";
 
 function App() {
   return (
@@ -9,7 +9,7 @@ function App() {
       <Hero />
       <About />
       <Projects />
-      <Skills />
+      <Contact />
     </main>
   );
 }

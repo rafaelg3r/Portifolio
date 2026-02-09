@@ -4,11 +4,16 @@ import "./global.css";
 import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
 import App from "./App.tsx";
+import CursorFollower from "./components/CursorFollower.tsx";
+import { CursorProvider } from "./components/CursorContext.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <Header />
-    <App />
-    <Footer />
+    <CursorProvider>
+      <CursorFollower />
+      <Header />
+      <App />
+      <Footer />
+    </CursorProvider>
   </StrictMode>,
 );

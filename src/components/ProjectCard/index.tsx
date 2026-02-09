@@ -1,63 +1,73 @@
-import { useState } from "react";
-
+import { motion } from "motion/react";
+import domHyginoMockup from "../../assets/mockups/domhygino.jpg";
+import classmindMockup from "../../assets/mockups/classmind.jpg";
 type ProjectCardProps = {
-  children: React.ReactNode | ((isHovering: boolean) => React.ReactNode);
-  height: string;
-  width?: string;
-  padTop?: string;
-  link?: string; 
-  hoverClass?: "domHoverBg" | "classmindHoverBg" | "portifolioHoverBg";
+  project: "Dom Hygino" | "Classmind";
 };
-
-export function ProjectCard({
-  children,
-  height,
-  padTop,
-  width,
-  link,
-  hoverClass
-}: ProjectCardProps) {
-  const paddingTop = padTop ? padTop : "pt-14";
-  const [isHovering, setIsHovering] = useState(false);
-
-  const baseCardClasses = `
-    flex flex-col px-8 ${paddingTop} gap-14 ${height} ${width} 
-    bg-linear-to-b from-neutral-950/60 to-stone-925/60 
-     shadow-project-card rounded-[10px] relative z-1
-  `;
-  const commonProps = {
-    onMouseEnter: () => setIsHovering(true),
-    onMouseLeave: () => setIsHovering(false),
-  };
-  const parentClasses =
-    "group p-2 outline-white-100 outline-1 -outline-offset-1 bg-linear-to-b from-neutral-950/60 to-stone-925/60 backdrop-blur-sm shadow-project-card rounded-2xl relative";
-
-  const content = typeof children === "function" ? children(isHovering) : children;
-
-  if (link) {
+export function Project({ project }: ProjectCardProps) {
+  const conteinerClasses =
+    "overflow-hidden px-8 pt-6 border border-zinc-800/40 bg-stone-920/25 flex flex-col justify-end items-center rounded-lg  md:h-[450px] h-[400px] relative  group transition-shadow duration-200 cursor-pointer";
+  if (project === "Dom Hygino") {
     return (
-      <div className={parentClasses} {...commonProps}>
-        <div className="absolute top-0 left-0 right-0 h-px highlight-top z-1"></div>
-        <a
-          id="linkContainer"
-          href={link}
-          target="_blank"
-          className={`${baseCardClasses} ${isHovering ? "inset-shadow-project-card-hover" : "inset-shadow-project-card"}`}
-        >
-          {content}
-          <div
-            className={`${hoverClass} transition-opacity duration-300 ease-in-out
-              ${isHovering ? " teste1 opacity-100" : "teste1 opacity-0"}`}
-          ></div>
-        </a>
-      </div>
+      <motion.div
+        initial="rest"
+        whileHover="hover"
+        animate="rest"
+        className={`${conteinerClasses} hover:shadow-blocks-red hover:border-pinkred-100 `}
+        variants={{
+          rest: { x: 0, y: 0 },
+          hover: { x: 25, y: -25 },
+        }}
+      >
+        <motion.div
+          variants={{
+            rest: { opacity: 0, y: -60 },
+            hover: { opacity: 1, y: 0 },
+          }}
+          transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+          style={{
+            background:
+              "radial-gradient(circle at 50% 0%, #e533457b 0%, transparent 80%)",
+          }}
+          className="inset-0 absolute z-0"
+        ></motion.div>
+        <img
+          src={domHyginoMockup}
+          alt="Website Dom Hygino"
+          className="w-2xl rounded-lg -mb-4  z-1"
+        />
+      </motion.div>
     );
-  } else {
+  } else if (project === "Classmind") {
     return (
-      <div className={parentClasses}>
-        <div className="absolute -top-px left-0 right-0 h-px highlight-top z-1"></div>
-        <div className={`${baseCardClasses}`}>{content}</div>
-      </div>
+      <motion.div
+        initial="rest"
+        whileHover="hover"
+        animate="rest"
+        className={`${conteinerClasses} hover:shadow-blocks-purple hover:border-[#6363db]`}
+        variants={{
+          rest: { x: 0, y: 0 },
+          hover: { x: -25, y: -25 },
+        }}
+      >
+        <motion.div
+          variants={{
+            rest: { opacity: 0, y: -60 },
+            hover: { opacity: 1, y: 0 },
+          }}
+          transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+          style={{
+            background:
+              "radial-gradient(circle at 50% 0%, #6363db7b 0%, transparent 80%)",
+          }}
+          className="inset-0 absolute z-0"
+        ></motion.div>
+        <motion.img
+          src={classmindMockup}
+          alt="Aplicativo Classmind"
+          className="h-[420px] w-max rounded-lg -mb-4 z-1"
+        />
+      </motion.div>
     );
   }
 }

@@ -1,6 +1,7 @@
 import { BackgroundGrid } from "../components/BackgroundGrid";
 import { Button } from "../components/Button";
 import { LucideArrowRight, LucideGithub } from "lucide-react";
+import Logo from "../assets/logotipo.png";
 
 export function Hero() {
   return (
@@ -19,7 +20,7 @@ export function Hero() {
               Web <span className="font-extrabold">Designer</span>
             </strong>
           </div>
-          <h1 className="md:text-7xl/24 text-4xl text-center text-lemon-100 font-extrabold max-w-7xl capitalize ">
+          <h1 className="md:text-7xl/24 text-5xl text-center text-lemon-100 font-extrabold max-w-7xl capitalize ">
             Projetando &{" "}
             <span className="font-pixelify italic text-indigo-500 font-normal">
               desenvolvendo
@@ -36,15 +37,30 @@ export function Hero() {
             Design e Código personalizado para o seu negócio.
           </h2>
           <div className="flex md:gap-8 gap-6 justify-center md:flex-row flex-col">
-            <Button type="main" >
+            <Button
+              type="main"
+              onClick={() => {
+                window.location.href = "#projetos";
+              }}
+            >
               Ver Projetos <LucideArrowRight width={18} />
             </Button>
-            <Button type="border">
+            <Button
+              type="border"
+              onClick={() =>
+                window.open("https://github.com/rafaelg3r", "_blank")
+              }
+            >
               <LucideGithub width={18} />
               Perfil do Github
             </Button>
           </div>
         </div>
+        <img
+          src={Logo}
+          alt="Logo"
+          className="2xl:pt-14 xl:pt-8 pt-4 2xl:h-max xl:h-40 h-38 "
+        />
       </section>
       <BackgroundGrid />
     </>

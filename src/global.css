@@ -7,16 +7,18 @@
   --color-white-100: #f2f2f21a;
 
   --color-stone-920: #0c0c0c;
-  --color-stone-925: #060606;
+  --color-stone-925: #030303;
 
   --color-neutral-850: #222223;
   --color-neutral-950: #151515;
+
+  --color-pinkred-100: #e53344;
 
   --color-gray-250: #c0bfbd;
 
   --color-lemon-100: #c3d350;
   --color-lemon-200: #00bc7d;
-  --color-lemon-800: #00130D;
+  --color-lemon-800: #00130d;
   /* fonts */
   --font-jetbrains: "JetBrains Mono", monospace;
   --font-pixelify: "Pixelify Sans", times;
@@ -26,6 +28,14 @@
   /* bg grid */
   --color-grid-line: rgba(255, 255, 255, 0.1);
   /* shadows */
+  --shadow-blocks-red:
+    rgba(229, 51, 68, 0.4) -5px 5px, rgba(229, 51, 68, 0.3) -10px 10px,
+    rgba(229, 51, 68, 0.2) -15px 15px, rgba(229, 51, 68, 0.1) -20px 20px,
+    rgba(229, 51, 68, 0.05) -25px 25px;
+  --shadow-blocks-purple:
+    rgba(99, 99, 219, 0.4) 5px 5px, rgba(99, 99, 219, 0.3) 10px 10px,
+    rgba(99, 99, 219, 0.2) 15px 15px, rgba(99, 99, 219, 0.1) 20px 20px,
+    rgba(99, 99, 219, 0.05) 25px 25px;
   --shadow-button:
     inset 0 1px rgba(255, 255, 255, 0.15),
     inset 0 0 0 1px rgba(255, 255, 255, 0.1),
@@ -73,4 +83,26 @@ body {
 }
 section {
   scroll-margin-top: 100px;
+}
+
+/* SmootScroll */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
 }
