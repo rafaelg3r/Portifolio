@@ -1,9 +1,15 @@
 import { BackgroundGrid } from "../components/BackgroundGrid";
 import { Button } from "../components/Button";
+import { motion } from "framer-motion";
+import { useState } from "react";
 import { LucideArrowRight, LucideGithub } from "lucide-react";
 import Logo from "../assets/logotipo.png";
+import { useCursor } from "../components/CursorContext";
 
 export function Hero() {
+  const [rotation, setRotation] = useState(0);
+  const { setVariant } = useCursor();
+
   return (
     <>
       <section
@@ -56,10 +62,16 @@ export function Hero() {
             </Button>
           </div>
         </div>
-        <img
+        <motion.img
+          onHoverStart={() => setVariant("hover")}
+          onHoverEnd={() => setVariant("default")}
+          whileHover={{ scale: 1.1 }}
+          animate={{ rotate: rotation }}
+          onClick={() => setRotation(rotation + 360)}
           src={Logo}
           alt="Logo"
-          className="2xl:pt-14 xl:pt-8 pt-4 2xl:h-max xl:h-40 h-38 "
+          className="2xl:pt-14 xl:pt-8 pt-4 2xl:h-max xl:h-40 h-38 cursor-pointer select-none origin-center"
+          draggable={false}
         />
       </section>
       <BackgroundGrid />

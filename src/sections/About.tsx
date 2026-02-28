@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from "framer-motion";
-import { Layers, Languages, Ear } from "lucide-react";
+import { Layers, Languages, Ear, Linkedin, Mail } from "lucide-react";
 import { FaReact as ReactIcon } from "react-icons/fa";
 import { RiTailwindCssFill as TailwindIcon } from "react-icons/ri";
 import { TbBrandFramerMotion as MotionIcon } from "react-icons/tb";
@@ -125,7 +125,36 @@ export function About() {
               .
             </p>
             <p>Quer trabalhar comigo? Entre em contato!</p>
-            <button>Email</button>
+            <div className="mt-6 grid md:grid-cols-2 grid-cols-1 gap-px border border-zinc-800/40 rounded-sm bg-zinc-800">
+              <motion.button
+                onHoverStart={() => setVariant("hover")}
+                onHoverEnd={() => setVariant("default")}
+                initial={{
+                  backgroundColor: "#060606",
+                }}
+                whileHover={{
+                  backgroundColor: "#27272a",
+                }}
+                className="flex-1 flex text-white-900  text-md md:rounded-l-sm md:rounded-tr-none rounded-t-sm cursor-pointer text-shadow-simple gap-3 items-center justify-center font-semibold h-10"
+              >
+                <Mail width={18} />
+                Email
+              </motion.button>
+              <motion.button
+                onHoverStart={() => setVariant("hover")}
+                onHoverEnd={() => setVariant("default")}
+                initial={{
+                  backgroundColor: "#060606",
+                }}
+                whileHover={{
+                  backgroundColor: "#27272a",
+                }}
+                className=" flex-1 text-white-900 text-md md:rounded-r-sm md:rounded-bl-none rounded-b-sm cursor-pointer text-shadow-simple flex gap-3 items-center justify-center font-semibold h-10"
+              >
+                <Linkedin width={18} />
+                Linkedin
+              </motion.button>
+            </div>
           </div>
         </div>
         <aside className="flex flex-col flex-3 border-zinc-800/40 border rounded-lg ">
@@ -164,7 +193,7 @@ export function About() {
             </div>
           </div>
           <div>
-            <div className="flex-1 p-4 ">
+            <div className="flex-1 p-4  min-h-110">
               <div className="flex flex-col gap-3">
                 <AnimatePresence mode="wait">
                   {stackData[alternateStack].map((item, index) => (

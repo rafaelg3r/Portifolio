@@ -15,7 +15,7 @@ export function Projects() {
         </p>
       </div>
       <div className="w-full flex flex-col gap-22">
-        <div className="w-full flex md:flex-row flex-col-reverse gap-18">
+        <div className="w-full flex lg:flex-row flex-col-reverse gap-18">
           <motion.div
             onHoverStart={() => setVariant("project")}
             onHoverEnd={() => setVariant("default")}
@@ -24,9 +24,9 @@ export function Projects() {
           >
             <Project project="Dom Hygino" />
           </motion.div>
-          <div className="flex flex-3 flex-col gap-5 items-center md:items-start text-center md:text-start">
-            <div className="flex gap-2 md:justify-start justify-center items-center">
-              <h3 className="text-3xl text-indigo-500 font-semibold font-jetbrains uppercase">
+          <div className="flex flex-3 flex-col gap-5 items-center lg:items-start text-center lg:text-start">
+            <div className="flex gap-2 lg:justify-start justify-center items-center">
+              <h3 className="text-nowrap text-3xl text-indigo-500 font-semibold font-jetbrains uppercase">
                 Dom Hygino
               </h3>
               <span className="font-jetbrains text-2xl">|</span>
@@ -34,7 +34,7 @@ export function Projects() {
                 01 - WEBSITE{" "}
               </strong>
             </div>
-            <div className="flex gap-2">
+            <div className="flex flex-wrap gap-2">
               <ProjectTech tech="react" />
               <ProjectTech tech="typescript" />
               <ProjectTech tech="motion" />
@@ -46,7 +46,7 @@ export function Projects() {
             </p>
           </div>
         </div>
-        <div className="w-full flex md:flex-row-reverse flex-col-reverse gap-18">
+        <div className="w-full flex lg:flex-row-reverse flex-col-reverse gap-18">
           <motion.div
             onHoverStart={() => setVariant("project")}
             onHoverEnd={() => setVariant("default")}
@@ -55,8 +55,8 @@ export function Projects() {
           >
             <Project project="Classmind"></Project>
           </motion.div>
-          <div className="flex flex-3  flex-col gap-5 md:items-end items-center text-center md:text-end">
-            <div className="flex md:flex-row gap-2 md:justify-start  justify-center items-center">
+          <div className="flex flex-3  flex-col gap-5 lg:items-end items-center text-center lg:text-end">
+            <div className="flex lg:flex-row gap-2 md:justify-start  justify-center items-center">
               <h3 className="text-3xl text-indigo-500 font-semibold font-jetbrains uppercase">
                 Classmind
               </h3>
@@ -65,7 +65,7 @@ export function Projects() {
                 02 - WEB APP{" "}
               </strong>
             </div>
-            <div className="flex gap-2">
+            <div className="flex flex-wrap gap-2">
               <ProjectTech tech="react" />
               <ProjectTech tech="typescript" />
               <ProjectTech tech="tailwind" />

@@ -1,7 +1,7 @@
 // src/context/CursorContext.tsx
-import { createContext, useContext, useState, type ReactNode } from 'react';
+import { createContext, useContext, useState, type ReactNode } from "react";
 
-type CursorVariant = 'default' | 'hover' | 'project' | 'text';
+type CursorVariant = "default" | "hover" | "project" | "text";
 
 interface CursorContextProps {
   variant: CursorVariant;
@@ -11,7 +11,7 @@ interface CursorContextProps {
 const CursorContext = createContext<CursorContextProps | undefined>(undefined);
 
 export const CursorProvider = ({ children }: { children: ReactNode }) => {
-  const [variant, setVariant] = useState<CursorVariant>('default');
+  const [variant, setVariant] = useState<CursorVariant>("default");
 
   return (
     <CursorContext.Provider value={{ variant, setVariant }}>
@@ -22,6 +22,7 @@ export const CursorProvider = ({ children }: { children: ReactNode }) => {
 
 export const useCursor = () => {
   const context = useContext(CursorContext);
-  if (!context) throw new Error('useCursor deve ser usado dentro de CursorProvider');
+  if (!context)
+    throw new Error("useCursor deve ser usado dentro de CursorProvider");
   return context;
 };

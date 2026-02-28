@@ -1,9 +1,11 @@
 // src/components/Cursor.tsx
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { motion, useMotionValue, useSpring } from "framer-motion";
 import { useCursor } from "./CursorContext";
 
 export default function CursorFollower() {
+  const [isDesktop, setIsDesktop] = useState(false);
+
   const { variant } = useCursor();
 
   const mouseX = useMotionValue(0);
@@ -17,6 +19,18 @@ export default function CursorFollower() {
   const smallSpringY = useSpring(mouseY, smallSpringConfig);
 
   useEffect(() => {
+    // screen Check
+    const checkScreen = () => {
+      setIsDesktop(window.innerWidth >= 1024);
+    };
+
+    checkScreen();
+    window.addEventListener("resize", checkScreen);
+    return () => window.removeEventListener("resize", checkScreen);
+  }, []);
+
+  useEffect(() => {
+    // Cursor follower Position
     const moveCursor = (e: MouseEvent) => {
       mouseX.set(e.clientX);
       mouseY.set(e.clientY);
@@ -25,7 +39,6 @@ export default function CursorFollower() {
     return () => window.removeEventListener("mousemove", moveCursor);
   }, [mouseX, mouseY]);
 
- 
   const variants = {
     default: {
       height: 48,
@@ -44,6 +57,7 @@ export default function CursorFollower() {
       border: "2px solid #030303",
     },
   };
+  if (!isDesktop) return null;
 
   return (
     <>

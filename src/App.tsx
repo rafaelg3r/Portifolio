@@ -5,7 +5,7 @@ import { Contact } from "./sections/Contact.tsx";
 
 function App() {
   return (
-    <main className="lg:px-40 md:px-14 px-5 flex flex-col gap-10">
+    <main className="2xl:px-40 xl:px-30 lg:px-18 md:px-14 px-5 flex flex-col gap-10">
       <Hero />
       <About />
       <Projects />
