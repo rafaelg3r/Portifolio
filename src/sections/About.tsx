@@ -126,34 +126,45 @@ export function About() {
             </p>
             <p>Quer trabalhar comigo? Entre em contato!</p>
             <div className="mt-6 grid md:grid-cols-2 grid-cols-1 gap-px border border-zinc-800/40 rounded-sm bg-zinc-800">
-              <motion.button
-                onHoverStart={() => setVariant("hover")}
-                onHoverEnd={() => setVariant("default")}
-                initial={{
-                  backgroundColor: "#060606",
-                }}
-                whileHover={{
-                  backgroundColor: "#27272a",
-                }}
-                className="flex-1 flex text-white-900  text-md md:rounded-l-sm md:rounded-tr-none rounded-t-sm cursor-pointer text-shadow-simple gap-3 items-center justify-center font-semibold h-10"
+              <a
+                href="mailto:rafael.dvedana@gmail.com"
+                className="flex-1 flex text-white-900 items-center justify-center h-10"
               >
-                <Mail width={18} />
-                Email
-              </motion.button>
-              <motion.button
-                onHoverStart={() => setVariant("hover")}
-                onHoverEnd={() => setVariant("default")}
-                initial={{
-                  backgroundColor: "#060606",
-                }}
-                whileHover={{
-                  backgroundColor: "#27272a",
-                }}
-                className=" flex-1 text-white-900 text-md md:rounded-r-sm md:rounded-bl-none rounded-b-sm cursor-pointer text-shadow-simple flex gap-3 items-center justify-center font-semibold h-10"
+                <motion.button
+                  onHoverStart={() => setVariant("hover")}
+                  onHoverEnd={() => setVariant("default")}
+                  initial={{
+                    backgroundColor: "#060606",
+                  }}
+                  whileHover={{
+                    backgroundColor: "#27272a",
+                  }}
+                  className="flex-1 flex md:rounded-l-sm md:rounded-tr-none rounded-t-sm  cursor-pointer text-shadow-simple gap-3 items-center justify-center font-semibold h-10"
+                >
+                  <Mail width={18} />
+                  Email
+                </motion.button>
+              </a>
+              <a
+                target="_blank"
+                href="https://www.linkedin.com/in/rafael-da-costa-vedana-928913291"
+                className=" flex-1 md:rounded-r-sm md:rounded-bl-none rounded-b-sm flex items-center justify-center font-semibold h-10"
               >
-                <Linkedin width={18} />
-                Linkedin
-              </motion.button>
+                <motion.button
+                  onHoverStart={() => setVariant("hover")}
+                  onHoverEnd={() => setVariant("default")}
+                  initial={{
+                    backgroundColor: "#060606",
+                  }}
+                  whileHover={{
+                    backgroundColor: "#27272a",
+                  }}
+                  className=" flex-1 text-white-900 text-md md:rounded-r-sm md:rounded-bl-none rounded-b-sm cursor-pointer text-shadow-simple flex gap-3 items-center justify-center font-semibold h-10"
+                >
+                  <Linkedin width={18} />
+                  Linkedin
+                </motion.button>
+              </a>
             </div>
           </div>
         </div>
