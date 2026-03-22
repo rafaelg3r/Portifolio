@@ -39,6 +39,19 @@ export default function CursorFollower() {
     return () => window.removeEventListener("mousemove", moveCursor);
   }, [mouseX, mouseY]);
 
+  const projectPointer = {
+    default: {
+      display: "block",
+    },
+    hover: {
+      display: "block",
+      width: 4,
+      height: 4,
+    },
+    project: {
+      display: "none",
+    },
+  };
   const variants = {
     default: {
       height: 48,
@@ -64,7 +77,10 @@ export default function CursorFollower() {
       {/* Ponto central */}
       <motion.div
         className="fixed top-0 left-0 w-1.5 h-1.5 bg-white rounded-full pointer-events-none z-98 "
+        variants={projectPointer}
+        animate={variant}
         style={{
+          // opacity: variant === "project" ? 0 : 1,
           x: smallSpringX,
           y: smallSpringY,
           translateX: "-50%",

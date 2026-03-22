@@ -1,23 +1,29 @@
-import { motion } from "motion/react";
+import { AnimatePresence, motion } from "motion/react";
 import domHyginoMockup from "../../assets/mockups/domhygino.jpg";
+import domHyginoMenuMockup from "../../assets/mockups/domhygino-menu.jpg";
 import classmindMockup from "../../assets/mockups/classmind.jpg";
+import { useState } from "react";
 type ProjectCardProps = {
   project: "Dom Hygino" | "Classmind";
 };
 export function Project({ project }: ProjectCardProps) {
   const conteinerClasses =
-    "overflow-hidden px-8 pt-6 border border-zinc-800/40 bg-stone-920/25 flex flex-col justify-end items-center rounded-lg  md:h-[450px] h-[400px] relative  group transition-shadow duration-200 cursor-pointer";
+    "overflow-hidden px-8 pt-12 border border-zinc-800/40 bg-stone-920/25 flex flex-col justify-end items-center rounded-lg  max-h-[450px] relative  group transition-shadow duration-200 cursor-pointer";
+  const [isHovered, setIsHovered] = useState(false);
+  const domImage = isHovered ? domHyginoMenuMockup : domHyginoMockup;
   if (project === "Dom Hygino") {
     return (
       <motion.div
         initial="rest"
         whileHover="hover"
         animate="rest"
-        className={`${conteinerClasses} hover:shadow-blocks-red hover:border-pinkred-100 `}
+        className={`${conteinerClasses} hover:shadow-blocks-red hover:border-pinkred-100`}
         variants={{
           rest: { x: 0, y: 0 },
           hover: { x: 25, y: -25 },
         }}
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
       >
         <motion.div
           variants={{
@@ -31,11 +37,20 @@ export function Project({ project }: ProjectCardProps) {
           }}
           className="inset-0 absolute z-0"
         ></motion.div>
-        <img
-          src={domHyginoMockup}
-          alt="Website Dom Hygino"
-          className="w-2xl rounded-lg -mb-4  z-1"
-        />
+        <div className="relative w-2xl -mb-4 z-1 ">
+          <AnimatePresence mode="wait">
+            <motion.img
+              key={isHovered ? "hover" : "rest"}
+              src={isHovered ? domHyginoMenuMockup : domHyginoMockup}
+              alt="Website Dom Hygino"
+              className="w-full rounded-lg"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 5 }}
+              transition={{ duration: 0.2 }}
+            />
+          </AnimatePresence>
+        </div>
       </motion.div>
     );
   } else if (project === "Classmind") {

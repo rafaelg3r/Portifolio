@@ -148,7 +148,7 @@ export function About() {
               <a
                 target="_blank"
                 href="https://www.linkedin.com/in/rafael-da-costa-vedana-928913291"
-                className=" flex-1 md:rounded-r-sm md:rounded-bl-none rounded-b-sm flex items-center justify-center font-semibold h-10"
+                className=" flex-1 md:rounded-r-sm md:rounded-bl-none rounded-b-sm flex items-center justify-center h-10"
               >
                 <motion.button
                   onHoverStart={() => setVariant("hover")}
