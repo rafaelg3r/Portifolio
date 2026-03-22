@@ -5,7 +5,7 @@ type AboutCardProps = {
   subtitle: string;
   rounded?: "left" | "middle" | "right";
 };
-export function AboutCard({ title, subtitle, rounded }: AboutCardProps) {
+const AboutCard = ({ title, subtitle, rounded }: AboutCardProps) => {
   let roundedClass = "";
   if (rounded === "left") {
     roundedClass = "md:rounded-l-lg md:rounded-tr-none rounded-t-lg";
@@ -29,4 +29,6 @@ export function AboutCard({ title, subtitle, rounded }: AboutCardProps) {
       <span className="text-zinc-300 font-bold text-xl">{subtitle}</span>
     </motion.div>
   );
-}
+};
+
+export default AboutCard;

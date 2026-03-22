@@ -1,6 +1,6 @@
-import { Project } from "../components/ProjectCard";
-import { ProjectTech } from "../components/ProjectTech";
-import { Title } from "../components/SectionTitle";
+import Project from "../components/ProjectCard";
+import ProjectTech from "../components/ProjectTech";
+import Title from "../components/SectionTitle";
 import { useCursor } from "../components/CursorContext";
 import { motion } from "framer-motion";
 

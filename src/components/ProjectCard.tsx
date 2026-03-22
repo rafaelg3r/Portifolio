@@ -6,11 +6,11 @@ import { useState } from "react";
 type ProjectCardProps = {
   project: "Dom Hygino" | "Classmind";
 };
-export function Project({ project }: ProjectCardProps) {
+const Project = ({ project }: ProjectCardProps) => {
   const conteinerClasses =
     "overflow-hidden px-8 pt-12 border border-zinc-800/40 bg-stone-920/25 flex flex-col justify-end items-center rounded-lg  max-h-[450px] relative  group transition-shadow duration-200 cursor-pointer";
   const [isHovered, setIsHovered] = useState(false);
-  const domImage = isHovered ? domHyginoMenuMockup : domHyginoMockup;
+  // const domImage = isHovered ? domHyginoMenuMockup : domHyginoMockup;
   if (project === "Dom Hygino") {
     return (
       <motion.div
@@ -86,3 +86,5 @@ export function Project({ project }: ProjectCardProps) {
     );
   }
 }
+
+export default Project

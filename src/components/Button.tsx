@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { useCursor } from "../CursorContext";
+import { useCursor } from "./CursorContext";
 
 type ButtonProps = {
   children: React.ReactNode;
@@ -7,12 +7,7 @@ type ButtonProps = {
   isActive?: boolean;
   onClick?: () => void;
 };
-export function Button({
-  children,
-  type,
-  isActive,
-  onClick,
-}: ButtonProps) {
+const Button = ({ children, type, isActive, onClick }: ButtonProps) => {
   const { setVariant } = useCursor();
 
   const buttonClasses = `lg:px-6 px-4 text-white-900 text-md rounded-md cursor-pointer text-shadow-simple flex gap-3 items-center justify-center font-semibold h-12`;
@@ -84,4 +79,5 @@ export function Button({
     console.error(error);
     return null;
   }
-}
+};
+export default Button;

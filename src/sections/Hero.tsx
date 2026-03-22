@@ -1,5 +1,5 @@
-import { BackgroundGrid } from "../components/BackgroundGrid";
-import { Button } from "../components/Button";
+import BackgroundGrid from "../components/BackgroundGrid";
+import Button from "../components/Button";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { LucideArrowRight, LucideGithub } from "lucide-react";

@@ -2,7 +2,7 @@ type SectionTitleProps = {
   title: string;
   className?: string;
 };
-export function Title({ title, className }: SectionTitleProps) {
+const Title = ({ title, className }: SectionTitleProps) => {
   return (
     <h1
       className={`text-5xl text-lemon-100 font-bold tracking-tighter font-jetbrains ${className}`}
@@ -10,4 +10,6 @@ export function Title({ title, className }: SectionTitleProps) {
       {title}
     </h1>
   );
-}
+};
+
+export default Title;

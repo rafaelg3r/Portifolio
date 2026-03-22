@@ -19,7 +19,7 @@ type ProjectTechProps = {
   tech: keyof typeof imageMap;
 };
 
-export function ProjectTech({ tech }: ProjectTechProps) {
+const ProjectTech= ({ tech }: ProjectTechProps) => {
   const Icon = imageMap[tech];
 
   return (
@@ -29,3 +29,5 @@ export function ProjectTech({ tech }: ProjectTechProps) {
     </div>
   );
 }
+
+export default ProjectTech

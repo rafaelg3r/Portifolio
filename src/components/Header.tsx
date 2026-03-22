@@ -1,8 +1,8 @@
-import { Button } from "../Button";
+import Button  from "./Button";
 // import logotipo from "../../assets/logotipo.png";
 import { useState } from "react";
 
-export function Header() {
+const Header = () => {
   const [activeBtn, setActiveBtn] = useState("Início");
   const navbarBtns = ["Início", "Sobre", "Projetos", "Contato"];
 
@@ -28,3 +28,4 @@ export function Header() {
     </header>
   );
 }
+export default Header

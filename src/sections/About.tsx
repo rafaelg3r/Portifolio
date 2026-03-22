@@ -7,8 +7,8 @@ import {
   SiTypescript as TypescriptIcon,
   SiVite as ViteIcon,
 } from "react-icons/si";
-import { AboutCard } from "../components/aboutCard";
-import { Title } from "../components/SectionTitle";
+import AboutCard from "../components/AboutCard";
+import Title from "../components/SectionTitle";
 import { useState } from "react";
 import { useCursor } from "../components/CursorContext";
 

@@ -1,8 +1,8 @@
 import { motion } from "motion/react";
-import { Button } from "../components/Button";
+import Button from "../components/Button";
 import { Linkedin, Mail } from "lucide-react";
 
-export function Contact() {
+export const Contact = () => {
   return (
     <motion.div
       id="contato"
@@ -24,7 +24,10 @@ export function Contact() {
             Email
           </Button>
         </a>
-        <a target="_blank" href="https://www.linkedin.com/in/rafael-da-costa-vedana-928913291">
+        <a
+          target="_blank"
+          href="https://www.linkedin.com/in/rafael-da-costa-vedana-928913291"
+        >
           <Button type="border">
             <Linkedin width={18} />
             Linkedin
@@ -33,4 +36,4 @@ export function Contact() {
       </div>
     </motion.div>
   );
-}
+};
