@@ -40,7 +40,7 @@ const projectsData: { [key: string]: projectsDataProps } = {
 };
 const Project = ({ project }: ProjectCardProps) => {
   const conteinerClasses =
-    "border border-zinc-800/40 bg-stone-920/25 flex flex-col justify-end items-center rounded-lg  max-w-[660px] group transition-shadow duration-200 cursor-pointer";
+    "border border-zinc-800/40 bg-stone-920 flex flex-col items-center rounded-lg  max-w-[660px] h-full group transition-shadow duration-200 cursor-pointer";
   const [isHovered, setIsHovered] = useState(false);
   return (
     <motion.div
@@ -67,7 +67,7 @@ const Project = ({ project }: ProjectCardProps) => {
                 : classmindMockup
           }
           alt="Dom Hygino website"
-          className="rounded-lg"
+          className="rounded-t-lg"
           onClick={
             project === "Dom Hygino"
               ? () => window.open("https://domhygino.com.br/")
@@ -75,7 +75,7 @@ const Project = ({ project }: ProjectCardProps) => {
           }
         />
       </div>
-      <div className="flex flex-col gap-5 bg-stone-920  p-4 sm:p6 md:p-8 rounded-lg">
+      <div className="flex flex-col gap-5 p-4 sm:p6 md:p-8 rounded-lg">
         <div className="flex items-center justify-center gap-2">
           <h3 className="text-nowrap text-3xl text-indigo-500 font-semibold font-jetbrains uppercase">
             {projectsData[project].title}
