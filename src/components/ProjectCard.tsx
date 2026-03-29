@@ -25,7 +25,7 @@ const projectsData: { [key: string]: projectsDataProps } = {
     title: "Dom Hygino",
     num: "01",
     description:
-      "Desenvolvimento de um website com foco em UX/UI de alto padrão, otimizada para o público de uma rede de franquias no setor de carnes premium.Um website com foco em UX/UI de alto padrão, otimizada para o público de uma rede de franquias no setor de carnes premium.",
+      "Desenvolvimento de um website com foco em UX/UI de alto padrão, otimizada para o público de uma rede de franquias no setor de carnes premium.",
     type: "WEBSITE",
     techs: ["typescript", "react", "motion", "vite"],
   },
