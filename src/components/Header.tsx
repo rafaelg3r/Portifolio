@@ -1,4 +1,4 @@
-import Button  from "./Button";
+import Button from "./Button";
 // import logotipo from "../../assets/logotipo.png";
 import { useState } from "react";
 
@@ -11,7 +11,7 @@ const Header = () => {
       <div className="flex justify-center items-center w-max">
         <nav className="relative p-1.5 bg-neutral-950/60 rounded-3xl shadow-button highlight-shadows flex gap-1.5 backdrop-blur-sm">
           {navbarBtns.map((item) => (
-            <a href={`#${item.toLowerCase()}`}>
+            <a key={item} href={`#${item.toLowerCase()}`}>
               <Button
                 key={item}
                 isActive={activeBtn === item}
@@ -27,5 +27,5 @@ const Header = () => {
       </div>
     </header>
   );
-}
-export default Header
+};
+export default Header;

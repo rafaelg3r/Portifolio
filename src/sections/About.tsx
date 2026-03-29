@@ -4,6 +4,7 @@ import { FaReact as ReactIcon } from "react-icons/fa";
 import { RiTailwindCssFill as TailwindIcon } from "react-icons/ri";
 import { TbBrandFramerMotion as MotionIcon } from "react-icons/tb";
 import {
+  SiNextdotjs,
   SiTypescript as TypescriptIcon,
   SiVite as ViteIcon,
 } from "react-icons/si";
@@ -11,6 +12,7 @@ import AboutCard from "../components/AboutCard";
 import Title from "../components/SectionTitle";
 import { useState } from "react";
 import { useCursor } from "../components/CursorContext";
+import profile from "../assets/profile.png";
 
 const stackData = {
   front: [
@@ -39,9 +41,16 @@ const stackData = {
       level: "intermediário",
     },
     {
+      name: "Next",
+      type: "Framework React",
+      icon: <SiNextdotjs size={32} color="#f0f0f0" />,
+      level: "intermediário",
+    },
+    {
       name: "Vite",
       type: "Ferramenta de Build",
       icon: <ViteIcon size={32} color="#646cff" />,
+      level: "avançado",
     },
   ],
   others: [
@@ -75,8 +84,14 @@ export function About() {
       </div>
       <div className="flex lg:flex-row flex-col gap-4">
         <div className="flex flex-col flex-5 border-zinc-800/40 border rounded-lg md:p-6 p-3 gap-10">
-          <div className="flex gap-4 items-center">
-            <div className="w-20 h-20 border border-white-500 rounded-full" />
+          <div className="flex flex-col sm:flex-row text-center sm:text-left  items-center justify-center md:justify-start gap-4">
+            <div className="w-20 h-20 rounded-full border-zinc-800">
+              <img
+                src={profile}
+                alt="Rafael da Costa Vedana"
+                className="w-full h-full object-cover object-[center_20%] rounded-full grayscale-90"
+              />
+            </div>
             <div>
               <h2 className="text-2xl text-indigo-400 font-bold ">
                 Rafael da Costa Vedana
@@ -87,7 +102,7 @@ export function About() {
             </div>
           </div>
           <div className="grid md:grid-cols-3 grid-cols-1 gap-px  border border-zinc-800/40 rounded-lg bg-zinc-800">
-            <AboutCard title="Experiência" subtitle="+8 meses" rounded="left" />
+            <AboutCard title="Experiência" subtitle="+10 meses" rounded="left" />
             <AboutCard
               title="Cargo Atual"
               subtitle="Freelancer"

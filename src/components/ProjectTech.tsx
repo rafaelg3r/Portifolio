@@ -14,12 +14,13 @@ const imageMap = {
   vite: <ViteIcon />,
   typescript: <TypescriptIcon />,
 };
-
+// ProjectTech.tsx
 type ProjectTechProps = {
   tech: keyof typeof imageMap;
 };
+export type ProjectTechKey = keyof typeof imageMap;
 
-const ProjectTech= ({ tech }: ProjectTechProps) => {
+const ProjectTech = ({ tech }: ProjectTechProps) => {
   const Icon = imageMap[tech];
 
   return (
@@ -28,6 +29,6 @@ const ProjectTech= ({ tech }: ProjectTechProps) => {
       <span className="capitalize text-sm">{tech}</span>
     </div>
   );
-}
+};
 
-export default ProjectTech
+export default ProjectTech;

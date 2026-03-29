@@ -33,9 +33,9 @@
     rgba(229, 51, 68, 0.2) -15px 15px, rgba(229, 51, 68, 0.1) -20px 20px,
     rgba(229, 51, 68, 0.05) -25px 25px;
   --shadow-blocks-purple:
-    rgba(99, 99, 219, 0.4) 5px 5px, rgba(99, 99, 219, 0.3) 10px 10px,
-    rgba(99, 99, 219, 0.2) 15px 15px, rgba(99, 99, 219, 0.1) 20px 20px,
-    rgba(99, 99, 219, 0.05) 25px 25px;
+    rgba(99, 99, 219, 0.4) -5px 5px, rgba(99, 99, 219, 0.3) -10px 10px,
+    rgba(99, 99, 219, 0.2) -15px 15px, rgba(99, 99, 219, 0.1) -20px 20px,
+    rgba(99, 99, 219, 0.05) -25px 25px;
   --shadow-button:
     inset 0 1px rgba(255, 255, 255, 0.15),
     inset 0 0 0 1px rgba(255, 255, 255, 0.1),
