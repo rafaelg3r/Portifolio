@@ -12,7 +12,7 @@ import AboutCard from "../components/AboutCard";
 import Title from "../components/SectionTitle";
 import { useState } from "react";
 import { useCursor } from "../components/CursorContext";
-import profile from "../assets/profile.png";
+import profile from "../assets/profile-icon.png";
 
 const stackData = {
   front: [
@@ -85,11 +85,11 @@ export function About() {
       <div className="flex lg:flex-row flex-col gap-4">
         <div className="flex flex-col flex-5 border-zinc-800/40 border rounded-lg md:p-6 p-3 gap-10">
           <div className="flex flex-col sm:flex-row text-center sm:text-left  items-center justify-center md:justify-start gap-4">
-            <div className="w-20 h-20 rounded-full border-zinc-800">
+            <div className="w-20 h-20 rounded-full border-zinc-800 overflow-hidden relative" >
               <img
                 src={profile}
                 alt="Rafael da Costa Vedana"
-                className="w-full h-full object-cover object-[center_20%] rounded-full grayscale-90"
+                className="w-26 h-26 object-cover object-center absolute -top-2 rounded-full grayscale-90"
               />
             </div>
             <div>
@@ -102,7 +102,11 @@ export function About() {
             </div>
           </div>
           <div className="grid md:grid-cols-3 grid-cols-1 gap-px  border border-zinc-800/40 rounded-lg bg-zinc-800">
-            <AboutCard title="Experiência" subtitle="+10 meses" rounded="left" />
+            <AboutCard
+              title="Experiência"
+              subtitle="+10 meses"
+              rounded="left"
+            />
             <AboutCard
               title="Cargo Atual"
               subtitle="Freelancer"
