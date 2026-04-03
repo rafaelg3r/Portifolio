@@ -44,7 +44,7 @@ const stackData = {
       name: "Next",
       type: "Framework React",
       icon: <SiNextdotjs size={32} color="#f0f0f0" />,
-      level: "intermediário",
+      level: "iniciante",
     },
     {
       name: "Vite",
