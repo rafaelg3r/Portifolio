@@ -12,7 +12,7 @@ import AboutCard from "../components/AboutCard";
 import Title from "../components/SectionTitle";
 import { useState } from "react";
 import { useCursor } from "../components/CursorContext";
-import profile from "../assets/profile.jpeg";
+import profile from "../assets/profile.png";
 
 const stackData = {
   front: [
@@ -89,7 +89,7 @@ export function About() {
               <img
                 src={profile}
                 alt="Rafael da Costa Vedana"
-                className="w-26 h-26 object-cover object-center absolute -top-2 rounded-full"
+                className="w-26 h-26 object-cover object-center absolute -top-2 rounded-full [image-rendering:crisp-edges]"
               />
             </div>
             <div>
